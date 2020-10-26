@@ -45,20 +45,17 @@ public class JWTEC256 {
 		Base64URL x5t = Base64URL.encode("6d3eb3acc9480dcf41d532344036f82f0f4dbd96");
 
 		// CERTIFICATE
-		String x5c = "-----BEGIN CERTIFICATE-----\r\n" + 
-				"MIIBSDCB7qADAgECAgYBdTvcqpQwCgYIKoZIzj0EAwIwKzEpMCcGA1UEAwwgUiUy\r\n" + 
-				"Rm5YM0dPaHpQYmlQaFM3a0MwYmcycEJqc0UlM0QwHhcNMjAxMDE4MTMxODM4WhcN\r\n" + 
-				"MjEwODE0MTMxODM4WjArMSkwJwYDVQQDDCBSJTJGblgzR09oelBiaVBoUzdrQzBi\r\n" + 
-				"ZzJwQmpzRSUzRDBZMBMGByqGSM49AgEGCCqGSM49AwEHA0IABGzYLv0rq/Q0NnfL\r\n" + 
-				"tAsocrAGw8GnKM20/Qslri62y+Mb4Kk4MbEgFfwsflEDCrMqcT9bXY0QeUNvq9jL\r\n" + 
-				"0boAA+UwCgYIKoZIzj0EAwIDSQAwRgIhAOoMkIscOx+ldCvbxrb/SVFOQvPJ0xt0\r\n" + 
-				"ZgXBNaTtEWBXAiEA5GfO5G7SbvLMQINRGwdiS/8xBYDo4d4pY6Yz1ff41F8=\r\n" + 
-				"-----END CERTIFICATE-----";
-
-		JSONArray x509 = new JSONArray();
+		String x5c = "MIIBSDCB7qADAgECAgYBdTvcqpQwCgYIKoZIzj0EAwIwKzEpMCcGA1UEAwwgUiUy" + 
+				"Rm5YM0dPaHpQYmlQaFM3a0MwYmcycEJqc0UlM0QwHhcNMjAxMDE4MTMxODM4WhcN" + 
+				"MjEwODE0MTMxODM4WjArMSkwJwYDVQQDDCBSJTJGblgzR09oelBiaVBoUzdrQzBi" + 
+				"ZzJwQmpzRSUzRDBZMBMGByqGSM49AgEGCCqGSM49AwEHA0IABGzYLv0rq/Q0NnfL" + 
+				"tAsocrAGw8GnKM20/Qslri62y+Mb4Kk4MbEgFfwsflEDCrMqcT9bXY0QeUNvq9jL" + 
+				"0boAA+UwCgYIKoZIzj0EAwIDSQAwRgIhAOoMkIscOx+ldCvbxrb/SVFOQvPJ0xt0" + 
+				"ZgXBNaTtEWBXAiEA5GfO5G7SbvLMQINRGwdiS/8xBYDo4d4pY6Yz1ff41F8=";
 
 		// LISTA DE CERTIFICADOS
-		x509.add(Base64URL.encode(x5c).toString());
+		JSONArray x509 = new JSONArray();
+		x509.add(x5c);
 
 		// ALGORITMOS ES
 		JSONObject jwkES = new JSONObject();
