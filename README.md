@@ -19,6 +19,4 @@ Vamos seguir o passo a passo para gerarmos os JWTs (cada qual com seu devido alg
               3 – Nas classes RS256 | PS256 | ES256  basta preencher os campos conforme os atributos do JSON apresentado no item 1.
               Lembrando de substituir o algoritmo referente as chaves geradas.
 
-              4 – A String do Certificate precisa conter o: "-----BEGIN CERTIFICATE-----" e "-----END CERTIFICATE-----" conforme implementado no código fonte.
-
-              5 – Basta executar o código e copiar o JWT Assinado para que possa verificar sua estrutura em http://jwt.io  
+              4 – Basta executar o código e copiar o JWT Assinado para que possa verificar sua estrutura em http://jwt.io  
