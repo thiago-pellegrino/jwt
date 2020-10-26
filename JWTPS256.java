@@ -44,27 +44,25 @@ public class JWTPS256 {
 		Base64URL x5t = Base64URL.encode("dfd64ce2088a8fc03454bb317e13bb5dee7dd92c");
 
 		// CERTIFICATE
-		String x5c = "-----BEGIN CERTIFICATE-----\r\n"
-				+ "MIIC1DCCAbygAwIBAgIGAXUyKWeFMA0GCSqGSIb3DQEBCwUAMCsxKTAnBgNVBAMM\r\n"
-				+ "IEVRUndwVTZYNEVDNlR4akJuTiUyQmZSZm9aMTVFJTNEMB4XDTIwMTAxNjE2MDYx\r\n"
-				+ "NVoXDTIxMDgxMjE2MDYxNVowKzEpMCcGA1UEAwwgRVFSd3BVNlg0RUM2VHhqQm5O\r\n"
-				+ "JTJCZlJmb1oxNUUlM0QwggEiMA0GCSqGSIb3DQEBAQUAA4IBDwAwggEKAoIBAQCc\r\n"
-				+ "K3HaAsnfycnE/OpGUrnNyM5R+deYpVBVaQ8rPGTvWTvI2i+hm5/SIQ+Gewciz+TK\r\n"
-				+ "UaIcTM20Nkc9f/1t3uSjDb/xEMcCvbD/92ar/nXF56t0T1gSk0JmKiLZGgWgiM/D\r\n"
-				+ "MwTbZirIUhDkHcRiTKFGgsZX4HmyN2mP7H5ZRhfDmH0ghO9HPCbCCi8O+GbVrboX\r\n"
-				+ "Vq+ZkLPqVn+GJRtraCaMk4N/JyluTGi9o0S2wg5wcJgo7sxnFFGjkoVu9tl3sJxE\r\n"
-				+ "L67IbrAkKM3hhnOeU1mjumprZDVJAJ+KONgdKq1MsdAk8rRdR65o1go+CfUtEDRT\r\n"
-				+ "SjOpklfJ8MeXV7UlAc9FAgMBAAEwDQYJKoZIhvcNAQELBQADggEBAD1ebsTc6WqS\r\n"
-				+ "dZqpJ2MHwaSe9eLplJazMDQblrqUjvUi1ZdSILRV9dk4/1cutS/n5sti1L/qQfQv\r\n"
-				+ "UbmQpa25GyJKVK+blGO64/22DhvchKZNwpTEQsVIF/JQxPRn208Fdxtr+NZrnELx\r\n"
-				+ "qRg7TrtK1EjeqdmQt41WU2bT6KY1/1hZo3lhPbQchukrCtynrGDk8KO7CadJJolz\r\n"
-				+ "OKV7PW8SkX1Vq5wFQ9gJ+eCr7A7P0yRKTzK/BhXMvqfkIcyEbcfhcTnSz24ud45e\r\n"
-				+ "9bMGzPugooT64sVmRmov703F9DOzSti5IsGV75MZJU9pQtsdMHwXEBgNVMiL4BUI\r\n" + "649YJICF8D4=\r\n"
-				+ "-----END CERTIFICATE-----";
+		String x5c = "MIIC1DCCAbygAwIBAgIGAXUyKWeFMA0GCSqGSIb3DQEBCwUAMCsxKTAnBgNVBAMM"
+				+ "IEVRUndwVTZYNEVDNlR4akJuTiUyQmZSZm9aMTVFJTNEMB4XDTIwMTAxNjE2MDYx"
+				+ "NVoXDTIxMDgxMjE2MDYxNVowKzEpMCcGA1UEAwwgRVFSd3BVNlg0RUM2VHhqQm5O"
+				+ "JTJCZlJmb1oxNUUlM0QwggEiMA0GCSqGSIb3DQEBAQUAA4IBDwAwggEKAoIBAQCc"
+				+ "K3HaAsnfycnE/OpGUrnNyM5R+deYpVBVaQ8rPGTvWTvI2i+hm5/SIQ+Gewciz+TK"
+				+ "UaIcTM20Nkc9f/1t3uSjDb/xEMcCvbD/92ar/nXF56t0T1gSk0JmKiLZGgWgiM/D"
+				+ "MwTbZirIUhDkHcRiTKFGgsZX4HmyN2mP7H5ZRhfDmH0ghO9HPCbCCi8O+GbVrboX"
+				+ "Vq+ZkLPqVn+GJRtraCaMk4N/JyluTGi9o0S2wg5wcJgo7sxnFFGjkoVu9tl3sJxE"
+				+ "L67IbrAkKM3hhnOeU1mjumprZDVJAJ+KONgdKq1MsdAk8rRdR65o1go+CfUtEDRT"
+				+ "SjOpklfJ8MeXV7UlAc9FAgMBAAEwDQYJKoZIhvcNAQELBQADggEBAD1ebsTc6WqS"
+				+ "dZqpJ2MHwaSe9eLplJazMDQblrqUjvUi1ZdSILRV9dk4/1cutS/n5sti1L/qQfQv"
+				+ "UbmQpa25GyJKVK+blGO64/22DhvchKZNwpTEQsVIF/JQxPRn208Fdxtr+NZrnELx"
+				+ "qRg7TrtK1EjeqdmQt41WU2bT6KY1/1hZo3lhPbQchukrCtynrGDk8KO7CadJJolz"
+				+ "OKV7PW8SkX1Vq5wFQ9gJ+eCr7A7P0yRKTzK/BhXMvqfkIcyEbcfhcTnSz24ud45e"
+				+ "9bMGzPugooT64sVmRmov703F9DOzSti5IsGV75MZJU9pQtsdMHwXEBgNVMiL4BUI" + "649YJICF8D4=";
 		
 		// LISTA DE CERTIFICADOS
 		List<String> x509 = new ArrayList<String>();
-		x509.add(Base64URL.encode(x5c).toString());
+		x509.add(x5c);
 
 		// ALGORITMOS RS OU PS
 		JSONObject jwkRSPS = new JSONObject();
