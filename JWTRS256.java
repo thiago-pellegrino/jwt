@@ -48,7 +48,7 @@ public class JWTRS256 {
 		Base64URL x5t = Base64URL.encode("e853f70e43cc6505ee74057106ae638da73cc281");
 
 		// CERTIFICATE
-		String x5c = "-----BEGIN CERTIFICATE-----" + "MIIC1DCCAbygAwIBAgIGAXUsDoQzMA0GCSqGSIb3DQEBCwUAMCsxKTAnBgNVBAMM"
+		String x5c = "MIIC1DCCAbygAwIBAgIGAXUsDoQzMA0GCSqGSIb3DQEBCwUAMCsxKTAnBgNVBAMM"
 				+ "IDRGVlJ1YlZPbWg4M1E2VkE4biUyQmpldVZ5c2ZrJTNEMB4XDTIwMTAxNTExMzkx"
 				+ "MFoXDTIxMDgxMTExMzkxMFowKzEpMCcGA1UEAwwgNEZWUnViVk9taDgzUTZWQThu"
 				+ "JTJCamV1VnlzZmslM0QwggEiMA0GCSqGSIb3DQEBAQUAA4IBDwAwggEKAoIBAQCo"
@@ -62,12 +62,11 @@ public class JWTRS256 {
 				+ "jPaPREfIW8wNQ8x6snKczPQKQ4YhLiOsvQYtON7MWzJic0ulZWf+69z+8uWm1sQd"
 				+ "qIHox6Rmm9ZFHVEqlhjVF+LNUSxUI8MtdN+uZoQXbrP8HNB8BpXPbj86+HzBZgxD"
 				+ "HFKOrRrSBfY6+71Zwejri3h7MvYEqntlVrmyNJkQR7Tk7S0PuKhWw8OJcPCE2zLR"
-				+ "K5slx9IRgjsW1OE97fxMd9wzQhnHi2YFnzNiI9RM+9/YtrRNTbOjedjOyOzsMqrJ" + "H71xsGH1tXY="
-				+ "-----END CERTIFICATE-----";
+				+ "K5slx9IRgjsW1OE97fxMd9wzQhnHi2YFnzNiI9RM+9/YtrRNTbOjedjOyOzsMqrJ" + "H71xsGH1tXY=";
 
 		// LISTA DE CERTIFICADOS
 		JSONArray x509 = new JSONArray();
-		x509.add(Base64URL.encode(x5c).toString());
+		x509.add(x5c);
 
 		// ALGORITMOS RS OU PS
 		JSONObject jwkRSPS = new JSONObject();
@@ -125,9 +124,15 @@ public class JWTRS256 {
 			e.printStackTrace();
 		}
 
-		String jwtToken = Jwts.builder().setHeaderParam("alg", algoritmo).setHeaderParam("jku", "")
-				.setHeaderParam("jwk", jwkRSPS).setHeaderParam("x5t", x5t.toString()).setHeaderParam("kid", kid)
-				.setPayload(payload).signWith(SignatureAlgorithm.RS256, (Key) priv).compact();
+		String jwtToken = Jwts.builder()
+				.setHeaderParam("alg", algoritmo)
+				.setHeaderParam("jku", "")
+				.setHeaderParam("jwk", jwkRSPS)
+				.setHeaderParam("x5t", x5t.toString())
+				.setHeaderParam("kid", kid)
+				.setPayload(payload)
+				.signWith(SignatureAlgorithm.RS256, (Key) priv)
+				.compact();
 
 		System.out.println(jwtToken);
 	}
