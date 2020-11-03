@@ -42,7 +42,7 @@ public class JWTEC256 {
 		String algoritmo = SignatureAlgorithm.ES256.toString();
 
 		// THUMBPRINT EM SHA1 DA PRIVATEKEY
-		Base64URL x5t = Base64URL.encode("6d3eb3acc9480dcf41d532344036f82f0f4dbd96");
+		Base64URL x5t = Base64URL.encode("fe5f5bc6c9c60e6c8eef1d0038df90a655ef556f");
 
 		// CERTIFICATE
 		String x5c = "MIIBSDCB7qADAgECAgYBdTvcqpQwCgYIKoZIzj0EAwIwKzEpMCcGA1UEAwwgUiUy" + 
