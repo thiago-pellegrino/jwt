@@ -14,7 +14,7 @@ Vamos seguir o passo a passo para gerarmos os JWTs (cada qual com seu devido alg
               Com isso devemos passar o Certificate no campo x5c em formato JSONArray e o PrivateKey na assinatura do JWS.
               Importante lembrar qual algoritmo está selecionado para utiliza-lo novamente na assinatura do JWT.
 
-              2 - https://www.venea.net/web/hash_function agora geramos o hash da PrivateKey em SHA-1 para o thumbprint que será o valor do campo x5t.
+              2 - https://www.venea.net/web/hash_function agora geramos o hash do certificado em SHA-1 para o thumbprint da PrivateKey utilizada que será o valor do campo x5t.
 
               3 – Nas classes RS256 | PS256 | ES256  basta preencher os campos conforme os atributos do JSON apresentado no item 1.
               Lembrando de substituir o algoritmo referente as chaves geradas.
